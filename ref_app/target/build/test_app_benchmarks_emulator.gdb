@@ -12,7 +12,7 @@ break app_benchmark_crc.cpp:136
 continue
 
 # Format and print the value of a variable
-printf "0x%X\n", app_benchmark_standalone_result
+printf "0x%X\n\n", app_benchmark_standalone_result
 
 # Delete (all) breakpoint(s)
 delete
