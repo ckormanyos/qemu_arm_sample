@@ -1,5 +1,5 @@
 ##############################################################################
-#  Copyright Christopher Kormanyos 2024.
+#  Copyright Christopher Kormanyos 2020 - 2024.
 #  Distributed under the Boost Software License,
 #  Version 1.0. (See accompanying file LICENSE_1_0.txt
 #  or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -31,8 +31,6 @@ jobs:
         working-directory: ./ref_app/
       - name: build benchmark_single-stm32f429
         run: |
-          pwd
-          ls -la ${{ runner.workspace }}/qemu_arm_sample/ref_app
           PATH="${{ runner.workspace }}/qemu_arm_sample/ref_app/emu_env/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:$PATH"
           PATH="${{ runner.workspace }}/qemu_arm_sample/ref_app/emu_env/xpack-qemu-arm-8.2.6-1/bin:$PATH"
           mkdir -p bin

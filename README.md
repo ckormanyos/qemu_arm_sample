@@ -10,5 +10,6 @@ qemu_arm_sample
         <img src="https://img.shields.io/badge/try%20it%20on-godbolt-green" /></a>
 </p>
 
-qemu_arm_sample provides a fully-functional sample of running QEMU
-on a bare-metal embedded ARM(R) Cortex(R) M4F core.
+`ckormanyos/qemu_arm_sample` provides a fully-functioning sample
+of a running benchmark program executed with QEMU on a bare-metal
+embedded ARM(R) Cortex(R) M4F simulated device.
