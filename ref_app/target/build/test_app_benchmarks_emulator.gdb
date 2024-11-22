@@ -14,10 +14,9 @@ continue
 # Query the value of a variable
 print app_benchmark_standalone_result
 
-continue
+monitor reset halt
 
 # Delete (all) breakpoint(s)
 delete
 
-# Continue execution after the breakpoint (optional)
-continue
+quit
