@@ -1,9 +1,16 @@
 ﻿///////////////////////////////////////////////////////////////////////////////
-//  Copyright Christopher Kormanyos 2018 - 2019.
+//  Copyright Christopher Kormanyos 2018 - 2024.
 //  Distributed under the Boost Software License,
 //  Version 1.0. (See accompanying file LICENSE_1_0.txt
 //  or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
+
+#if defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Warray-bounds"
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wstringop-overflow="
+#endif
 
 #include <algorithm>
 #include <array>
@@ -36,7 +43,8 @@ void __my_startup(void)
   // the base position of the interrupt vector table.
   // So we do nothing here.
 
-  // TBD: Chip init: Watchdog, port, and oscillator, if any needed.
+  // Note: Not needed:
+  // Chip init: Watchdog, port, and oscillator, if any needed.
 
   // Initialize statics from ROM to RAM.
   // Zero-clear default-initialized static RAM.
@@ -49,9 +57,7 @@ void __my_startup(void)
   asm volatile("ldr r3, =main");
   asm volatile("blx r3");
 
-  exit(EXIT_SUCCESS);
-
-  // TBD: Nothing on return from main.
+  // Do nothing on return from main.
 }
 
 extern "C" void _exit (int);
@@ -278,3 +284,7 @@ const volatile std::array<isr_type, number_of_interrupts> __isr_vector =
   nullptr                    // 0x01FC, dummy
 }};
 
+#if defined(__GNUC__)
+#pragma GCC diagnostic pop
+#pragma GCC diagnostic pop
+#endif
