@@ -11,11 +11,8 @@ break app_benchmark_crc.cpp:136
 # Start or continue program execution
 continue
 
-# Query the value of a variable
-print app_benchmark_standalone_result
-
-# Format and write the value to a file
-shell printf "Benchmark result: 0x%X\n" $1
+# Format and print the value of a variable
+printf "0x%X\n", app_benchmark_standalone_result
 
 # Delete (all) breakpoint(s)
 delete
