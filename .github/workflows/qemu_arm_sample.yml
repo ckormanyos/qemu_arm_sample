@@ -50,7 +50,11 @@ jobs:
         run: |
           sleep 2
           PATH="${{ runner.workspace }}/qemu_arm_sample/ref_app/emu_env/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:$PATH"
+          echo 'Run test on target'
+          echo
           arm-none-eabi-gdb ./bin/app_benchmark_crc.elf -x ./target/build/test_app_benchmarks_emulator.gdb > ./app_benchmark_crc.txt
           cat ./app_benchmark_crc.txt
+          echo
+          echo 'We will now grep for the right answer...'
           grep '0xF00DCAFE' ./app_benchmark_crc.txt
         working-directory: ./ref_app/
