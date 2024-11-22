@@ -42,7 +42,7 @@ std::uint32_t crc32_mpeg2(input_iterator first,
 
   // Set the initial value and loop through the input data stream.
 
-  std::uint32_t crc = UINT32_C(0x5FFFFFFF);
+  std::uint32_t crc = UINT32_C(0xFFFFFFFF);
 
   for( ; first != last; ++first)
   {
