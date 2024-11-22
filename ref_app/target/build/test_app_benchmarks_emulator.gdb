@@ -2,9 +2,9 @@ target remote localhost:9999
 
 set confirm off
 
-break main
+break app_benchmark_get_standalone_result
 
-run
+continue
 
 print app_benchmark_standalone_result
 
