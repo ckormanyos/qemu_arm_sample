@@ -5,7 +5,7 @@
 //  or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-// cd cd /mnt/c/Users/ckorm/Documents/Ks/uC_Software/Boards/qemu_arm_sample
+// cd /mnt/c/Users/ckorm/Documents/Ks/uC_Software/Boards/qemu_arm_sample
 
 #include <array>
 #include <cstddef>
