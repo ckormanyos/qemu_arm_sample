@@ -13,9 +13,10 @@ break app_benchmark_get_standalone_result
 continue
 
 # Format and print the value of a variable.
-printf "0x%X\n\n", app_benchmark_standalone_result
+printf "value 0x%X\n\n", app_benchmark_standalone_result
 
 # Delete (all) breakpoint(s).
 delete
 
+# Perform a non-elegant quit of the GDB session.
 quit
