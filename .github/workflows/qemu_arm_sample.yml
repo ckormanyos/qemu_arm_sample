@@ -48,5 +48,5 @@ jobs:
       - name: run-test-on-target
         run: |
           PATH="${{ runner.workspace }}/qemu_arm_sample/ref_app/emu_env/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:$PATH"
-          arm-none-eabi-gdb ./bin/app_benchmark_crc.elf -ex "target remote localhost:9999" -ex "set confirm off" -ex "break app_benchmark_get_standalone_result" -ex "continue" -ex "print app_benchmark_standalone_result" -ex "quit"
+          arm-none-eabi-gdb ./bin/app_benchmark_crc.elf -x ./target/build/test_app_benchmarks_emulator.gdb
         working-directory: ./ref_app/
