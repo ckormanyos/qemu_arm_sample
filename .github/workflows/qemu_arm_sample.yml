@@ -22,6 +22,7 @@ jobs:
           fetch-depth: '0'
       - name: update-tools
         run: |
+          sudo apt install libncurses5
           mkdir -p emu_env && cd emu_env
           wget --no-check-certificate https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz
           tar -xf arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz
@@ -42,7 +43,7 @@ jobs:
       - name: emulate-target stm32f429
         run: |
           PATH="${{ runner.workspace }}/qemu_arm_sample/ref_app/emu_env/xpack-qemu-arm-8.2.6-1/bin:$PATH"
-          xpack-qemu-arm-8.2.6-1/bin/qemu-system-gnuarmeclipse --verbose --mcu STM32F429ZI --nographic --gdb tcp::9999 -d unimp,guest_errors &
+          qemu-system-gnuarmeclipse --verbose --mcu STM32F429ZI --nographic --gdb tcp::9999 -d unimp,guest_errors &
         working-directory: ./ref_app/
       - name: run-test-on-target
         run: |
