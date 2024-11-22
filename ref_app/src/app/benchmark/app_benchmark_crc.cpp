@@ -110,7 +110,7 @@ auto app::benchmark::run_crc() -> bool
     0x31U, 0x32U, 0x33U, 0x34U, 0x35U, 0x36U, 0x37U, 0x38U, 0x39U
   }};
 
-  constexpr std::uint32_t
+  const std::uint32_t
     app_benchmark_crc
     {
       math::checksums::crc::crc32_mpeg2(app_benchmark_crc_data.cbegin(), app_benchmark_crc_data.cend())

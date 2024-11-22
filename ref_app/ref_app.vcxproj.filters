@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{f2c3bf34-d721-4d3f-a6e0-41007e0c5aff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app\benchmark">
+      <UniqueIdentifier>{a4049d96-4dc9-4d55-91cc-bb51d04233b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target">
+      <UniqueIdentifier>{3a74d72a-5853-4270-8192-a0139ecd5db4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target\build">
+      <UniqueIdentifier>{7a0d5fc0-45da-4d01-ad75-ccc0d44c52f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target\micros">
+      <UniqueIdentifier>{7f8f428e-2432-4747-a548-5b01aaa9e5ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target\micros\stm32f429">
+      <UniqueIdentifier>{3bceb529-dc68-4b85-932f-ea4aaaebe6ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target\micros\stm32f429\make">
+      <UniqueIdentifier>{a42af8f8-8522-4a27-9207-f7f574d2d4d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="target\micros\stm32f429\make\single">
+      <UniqueIdentifier>{2bc3d6c7-1370-41bf-b13d-0d8db04b75ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\app\benchmark\app_benchmark_crc.cpp">
+      <Filter>src\app\benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="target\micros\stm32f429\make\single\crt.cpp">
+      <Filter>target\micros\stm32f429\make\single</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="target\build\test_app_benchmarks_emulator.gdb">
+      <Filter>target\build</Filter>
+    </None>
+    <None Include="target\micros\stm32f429\make\stm32f429.ld">
+      <Filter>target\micros\stm32f429\make</Filter>
+    </None>
+  </ItemGroup>
+</Project>
