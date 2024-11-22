@@ -12,11 +12,11 @@ break app_benchmark_crc.cpp:136
 continue
 
 # Query the value of a variable
-print /X app_benchmark_standalone_result
+print app_benchmark_standalone_result
 
 continue
 
-# Delete (all) breakpoints
+# Delete (all) breakpoint(s)
 delete
 
 # Continue execution after the breakpoint (optional)
