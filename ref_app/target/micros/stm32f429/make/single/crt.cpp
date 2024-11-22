@@ -36,7 +36,8 @@ void __my_startup(void)
   // the base position of the interrupt vector table.
   // So we do nothing here.
 
-  // TBD: Chip init: Watchdog, port, and oscillator, if any needed.
+  // Note: Not needed:
+  // Chip init: Watchdog, port, and oscillator, if any needed.
 
   // Initialize statics from ROM to RAM.
   // Zero-clear default-initialized static RAM.
@@ -49,9 +50,7 @@ void __my_startup(void)
   asm volatile("ldr r3, =main");
   asm volatile("blx r3");
 
-  exit(EXIT_SUCCESS);
-
-  // TBD: Nothing on return from main.
+  // Do nothing on return from main.
 }
 
 extern "C" void _exit (int);
