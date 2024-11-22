@@ -30,6 +30,7 @@ jobs:
         working-directory: ./ref_app/
       - name: build benchmark_single-stm32f429
         run: |
+          pwd
           ls -la ${{ runner.workspace }}/ref_app
           PATH="${{ runner.workspace }}/ref_app/emu_env/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:$PATH"
           PATH="${{ runner.workspace }}/ref_app/emu_env/xpack-qemu-arm-8.2.6-1/bin:$PATH"
