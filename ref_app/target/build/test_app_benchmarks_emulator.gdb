@@ -1,21 +1,20 @@
 
 # Connect to the target (e.g., OpenOCD or another GDB server)
 target remote localhost:9999
-monitor reset halt
+monitor halt
 
 load
 
 # Set a breakpoint at the specified location
-break app_benchmark_get_standalone_result
+break app_benchmark_crc.cpp:136
 
 # Start or continue program execution
 continue
 
-# Query the value of a variable
-print app_benchmark_standalone_result
+# Format and print the value of a variable
+printf "0x%X\n", app_benchmark_standalone_result
 
-# Delete (all) breakpoints
+# Delete (all) breakpoint(s)
 delete
 
-# Continue execution after the breakpoint (optional)
-continue
+quit
