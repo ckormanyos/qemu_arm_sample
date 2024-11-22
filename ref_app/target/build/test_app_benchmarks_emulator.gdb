@@ -6,7 +6,7 @@ monitor reset halt
 load
 
 # Set a breakpoint at the specified location
-break app_benchmark_crc:136
+break app_benchmark_crc.cpp:136
 
 # Start or continue program execution
 continue
