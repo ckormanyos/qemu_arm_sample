@@ -14,11 +14,8 @@ continue
 # Query the value of a variable
 print app_benchmark_standalone_result
 
-# Write the value to a file
-set $value = app_benchmark_standalone_result
-
 # Format and write the value to a file
-shell printf "Benchmark result: %d\n" $value
+shell printf "Benchmark result: 0x%X\n" $1
 
 # Delete (all) breakpoint(s)
 delete
