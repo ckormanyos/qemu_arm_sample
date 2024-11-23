@@ -73,7 +73,6 @@ jobs:
         shell: cmd
         working-directory: ./ref_app/
         run: |
-          set INCLUDE=%cd%;%cd%\..\boost-root;%INCLUDE%
-          MSBuild -m wide_integer.sln -p:useenv=true -p:Configuration=Release -p:Platform=x64 /t:Rebuild
+          MSBuild -m ref_app.sln -p:useenv=true -p:Configuration=Release -p:Platform=x64 /t:Rebuild
           dir %cd%\x64\Release\ref_app.exe
           %cd%\x64\Release\ref_app.exe
