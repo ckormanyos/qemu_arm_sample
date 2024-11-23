@@ -59,3 +59,20 @@ jobs:
           echo 'We will now grep for the right answer...'
           grep 'value 0xF00DCAFE' ./app_benchmark_crc.txt
         working-directory: ./ref_app/
+  msvc-release-x64:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+      - uses: actions/checkout@v4
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          toolset: 14.4
+      - name: msvc-release-x64
+        shell: cmd
+        working-directory: ./ref_app/
+        run: |
+          MSBuild -m ref_app.sln -p:useenv=true -p:Configuration=Release -p:Platform=x64 /t:Rebuild
+          dir %cd%\x64\Release\ref_app.exe
+          %cd%\x64\Release\ref_app.exe
