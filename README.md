@@ -23,3 +23,11 @@ The debugger is controlled via commands in the
 [GDB script](https://github.com/ckormanyos/qemu_arm_sample/blob/main/ref_app/target/build/test_app_benchmarks_emulator.gdb).
 
 CI runs on `ubuntu-latest` in GHA.
+
+## Original Downloads
+
+For the released toolchain, please see the original source at
+[arm-gnu-toolchain-downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
+
+The legacy `libncurses5` and `libtinfo5` can be found at
+[ubuntu/pool/universe/n/ncurses](http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/).
