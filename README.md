@@ -27,7 +27,7 @@ CI runs on `ubuntu-latest` in GHA.
 ## Original Downloads
 
 For the released toolchain, please see the original source at
-[arm-gnu-toolchain-downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+[arm-gnu-toolchain-downloads](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
 
 The legacy `libncurses5` and `libtinfo5` can be found at
 [ubuntu/pool/universe/n/ncurses](http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/).
